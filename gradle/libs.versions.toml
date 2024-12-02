@@ -1,6 +1,6 @@
 [libraries]
 annotations = { group = "org.jetbrains", name = "annotations", version = "24.1.0" }
-antlr = { group = "org.antlr", name = "antlr4", version = "4.7.2" }
+antlr = { group = "org.antlr", name = "antlr4", version = "4.13.2" }
 antlrAdaptor = { group = "org.antlr", name = "antlr4-intellij-adaptor", version = "0.1" }
 
 [plugins]
