@@ -19,7 +19,18 @@ version = properties("pluginVersion").get()
 
 // Configure project's dependencies
 repositories {
-    mavenCentral()
+    maven {
+        name = "maven-central"
+        url = uri(System.getenv("MAVEN_CENTRAL_URL") ?: "https://repo.maven.apache.org/maven2/")
+    }
+    maven {
+        name = "intellij-releases"
+        url = uri(System.getenv("INTELLIJ_RELEASES_URL") ?: "https://repo.maven.apache.org/maven2/")
+    }
+    maven {
+        name = "intellij-dependencies"
+        url = uri(System.getenv("INTELLIJ_DEPENDENCIES_URL") ?: "https://repo.maven.apache.org/maven2/")
+    }
 }
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
@@ -44,6 +55,7 @@ intellij {
     pluginName = properties("pluginName")
     version = properties("platformVersion")
     type = properties("platformType")
+    jreRepository = System.getenv("INTELLIJ_JBR_URL") ?: "https://cache-redirector.jetbrains.com/intellij-jbr"
 
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins = properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) }
