@@ -2,7 +2,7 @@ pluginManagement {
     repositories {
         maven {
             name = "gradle-plugin"
-            url = uri(System.getenv("GRADLE_PLUGIN_URL") ?: "https://plugins.gradle.org/m2/")
+            url = uri(System.getenv("GRADLE_PLUGINS_URL") ?: "https://plugins.gradle.org/m2/")
         }
     }
 }
