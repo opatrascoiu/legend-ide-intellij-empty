@@ -4,7 +4,7 @@ antlr = { group = "org.antlr", name = "antlr4", version = "4.7.2" }
 antlrAdaptor = { group = "org.antlr", name = "antlr4-intellij-adaptor", version = "0.1" }
 
 [plugins]
-changelog = { id = "org.jetbrains.changelog", version = "2.2.0" }
+changelog = { id = "org.jetbrains.changelog", version = "2.2.1" }
 gradleIntelliJPlugin = { id = "org.jetbrains.intellij", version = "1.17.2" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version = "1.9.23" }
 kover = { id = "org.jetbrains.kotlinx.kover", version = "0.7.6" }
